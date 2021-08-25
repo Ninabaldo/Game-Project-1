@@ -3,7 +3,7 @@
 # Game-Project-1 // TIC TAC TOE
 Name of the game: "tic-tac-toe"
 
-The Tfollowing game that I will present you is the typical Three row original game, where you will interact with your computer until you win or lose the game. 
+The following game that I will present you is the typical Three row original game, where you will interact with your computer until you win or lose the game. 
 
 # Rules of the game
 
