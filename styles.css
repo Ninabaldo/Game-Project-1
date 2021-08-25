@@ -1,99 +1,163 @@
-
-
-
 body{
-background: url("./fondo.jpg");
-background-repeat: no-repeat;
-background-position: relative;
-padding: 20px;
+    background-color: rgb(195, 151, 181);
+    font-family:-apple-system, "BlinkMacSystemFont", Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', Helvetica Neue, sans-serif;
+    color:white;
+    margin-top: 100px;
 
 }
-body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-    
-}
-section {
+
+h1,h2{
     text-align: center;
 }
 
-
-.title{
-margin: auto;
-}
-
-#victory{
-visibility: hidden;
+h1{
+    font-size: 4em;
 }
 
 h2{
-font-size: 2,5em;
+    font-size: 1.5em;
+
 }
 
+#tablero{
+    margin:auto;
+    
+    width: 375px;
+    max-width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    color:white
+    
+    
+}
 
-.box {
-    background: #53d6af;
-    border: black 1px solid;
-    width: 180px;
-    height: 180px;
-    margin: 6px;
-    margin-top: 0;
-    cursor:unset;
-    display: inline-block;
-    border-radius: 10px;
+#tablero>button{
+    width: 125px;
+    height: 125px;
+    max-width:33.33%;
+    font-size: 2em;
+    border-radius: 17px;
    
 }
 
-.boxParent{
-
-    margin: auto;
-
-
+#textoVictoria{
+    visibility: hidden;
+    color: rgb(255, 255, 255);
+    margin-top : 30px;
+    margin-bottom: 20px;
 }
-.row {
+    
+
+ #title{
+  color:white;
+  align-items: center;
+  
+ }
+
+
+
+ * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: #9c949c;
+  }
+  
+  /* Let's style the wrapper in such away that, 
+  it should always be at the center of the browser */
+  .wrapper {
+    position:absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+  }
+  
+  /* Style the Un-order list by setting its list-style to none */
+  .wrapper ul {
+    list-style: none;
+  }
+  
+  /* Style the list items inside the UL list, by setting its width, height and line-height 
+    and float them to left and set its border and border-radius.
+   */
+  .wrapper ul li {
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px solid #D8E2DC;
+    float: left;
+    transition: all 0.5s ease;
+  }
+  
+  /* Style the icons by setting its color and margin-top value to 20px 
+  to align it properly */
+  .wrapper ul li .fa {
+    color: #ffffff;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+  }
+  
+  /* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
+    to icons for glowing effect and use transition property for smooth transition effect. */
+  /*facebook*/
+  .wrapper ul li:hover.linkdin {
+    border: 5px solid #3b5998;
+    box-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .linkdin {
+    color: #3b5998;
+    text-shadow: 0 0 15px #7999dd;
+    transition: all 0.5s ease;
+  }
+  
+  /*github*/
+  .wrapper ul li:hover.github {
+    border: 5px solid #050505;
+    box-shadow: 0 0 15px #080808;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .github {
+    color: #050505;
+    text-shadow: 0 0 15px #020202;
+    transition: all 0.5s ease;
+  }
+  
+
+  
+  canvas {
     display: block;
-    float:none;
-    width:100%;
-    margin-left: 640px;
-}
-
-.box:hover{
-background:rgba(246, 245, 246, 0.288)
-
-}
-
-
-/*Button start*/
-
-#button {
-    margin-top: -14px;
-    margin-left: 240px;
-    line-height: 60px;
-    font-weight: normal;
-    padding: 0 30px;
-    background: rgb(235, 88, 203);
-    border: none;
-    border-radius: 17px;
-    font-size: 30px;
-    color:white;
+    margin: 0px auto 20px;
+    cursor: move;
   }
-
-  #button:hover {
-    background: rgb(122, 255, 233);
-  }
-
-  .github{
-  height: 70px;
-  margin-top: 50px;
-
-  }
-
-  .linkdin{
-  height: 70px;
-
-  }
-
+  
  
+  
+  button {
+    background: #848;
+    color: white;
+    font-size: 14px;
+    font-family: inherit;
+    border:  1px, white;
+    border-radius: 3px;
+    padding: 8px 10px;
+  }
+  
+  button:hover {
+    background: #606;
+    cursor: pointer;
+  }
 
+  
 
-
-
+   
+  
