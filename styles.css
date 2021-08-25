@@ -4,7 +4,7 @@ body{
     background-color: rgb(195, 151, 181);
     font-family:-apple-system, "BlinkMacSystemFont", Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', Helvetica Neue, sans-serif;
     color:white;
-    margin-top: 100px;
+    margin-top: 20px;
 
 }
 
@@ -44,15 +44,13 @@ h2{
 
 #textoVictoria{
     visibility: hidden;
-    color: rgb(255, 255, 255);
+    color: rgb(197, 43, 164);
     margin-top : 30px;
     margin-bottom: 20px;
 }
     
 
- #title{
-  color:white;
-  align-items: center;
+
   
  }
 
@@ -67,17 +65,16 @@ h2{
     background: #9c949c;
   }
   
-  /* Let's style the wrapper in such away that, 
-  it should always be at the center of the browser */
+  
   .wrapper {
     position:absolute;
-    top: 50%;
+    top: 80%;
     left: 90%;
     transform: translate(-50%, -50%);
     width: 550px;
   }
   
-  /* Style the Un-order list by setting its list-style to none */
+  
   .wrapper ul {
     list-style: none;
   }
@@ -89,11 +86,11 @@ h2{
     width: 75px;
     height: 75px;
     line-height: 75px;
-    margin: 0 10px;
+    margin: 0 5px;
     text-align: center;
     cursor: pointer;
     border-radius: 50%;
-    border: 5px solid #D8E2DC;
+    border: 3px solid #ffffff;
     float: left;
     transition: all 0.5s ease;
   }
@@ -106,8 +103,7 @@ h2{
     transition: all 0.5s ease;
   }
   
-  /* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
-    to icons for glowing effect and use transition property for smooth transition effect. */
+  
   /*facebook*/
   .wrapper ul li:hover.linkdin {
     border: 5px solid #3b5998;
@@ -155,7 +151,7 @@ h2{
   }
   
   button:hover {
-    background: #606;
+    background: rgba(241, 233, 162, 0.883);
     cursor: pointer;
   }
 
@@ -187,7 +183,7 @@ h2{
   }
   
   .text-copy:nth-child(1){
-      stroke: #16344d;
+      stroke: #e7da2a;
       animation-delay: -1;
   }
   
@@ -202,7 +198,7 @@ h2{
   }
   
   .text-copy:nth-child(4){
-      stroke: #915f6d;
+      stroke: #ffffff;
       animation-delay: -4s;
   }
   
