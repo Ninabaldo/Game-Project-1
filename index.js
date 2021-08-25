@@ -4,8 +4,7 @@ let puestas = 0;
 let partidaAcabada = false;
 let textoVictoria = 
 	document.getElementById("textoVictoria");
-let botones = 
-	Array.from(document.getElementsByTagName("button"));
+let botones = Array.from(document.getElementsByTagName("button"));
 
 botones.forEach(
 	x => x.addEventListener("click", ponerFicha)
