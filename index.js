@@ -4,7 +4,8 @@ let puestas = 0;
 let partidaAcabada = false;
 let textoVictoria = 
 	document.getElementById("textoVictoria");
-let botones = Array.from(document.getElementsByTagName("button"));
+let botones = 
+	Array.from(document.getElementsByTagName("button"));
 
 botones.forEach(
 	x => x.addEventListener("click", ponerFicha)
@@ -23,34 +24,31 @@ function ponerFicha(event){
 				ia();
 				estadoPartida = estado();
 				puestas += 1;
-                
 				cambiarTurno();	
 			}	
 		}
-   
-    }
-
-
+		
 		if(estadoPartida == 1){
 			textoVictoria.style.visibility = "visible";
 			partidaAcabada = true;
 		}
 		else if(estadoPartida == -1){
-			textoVictoria.innerHTML = "You loose ;("
+			textoVictoria.innerHTML = "Oh no,you lost ;( Try again!"
 			partidaAcabada = true;
 			textoVictoria.style.visibility = "visible";
 		}
 	}	
-
+}
 
 function cambiarTurno(){
-  
-	if(turno== 1){
+	if(turno==1){
 		turno = 0;
+        
 	}
 	else{
 		turno = 1;
 	}
+	
 }
 
 function estado(){
@@ -132,13 +130,11 @@ function ia(){
 		}
 		pos = n;
 	}
-    let timer = setTimeout(function(){
-       
-        botones[pos].innerHTML = "O";
-             }, 1500);
-	
+     
+	botones[pos].innerHTML = "O";
 	return pos;
 }
+
 
 
 
