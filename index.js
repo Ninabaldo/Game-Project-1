@@ -9,26 +9,23 @@
 //let timer= setTimeout(function(){
 	
 //},2000);
-
-
-
-
-let turno = 1;
-let fichas = ["O", "X"];
-let puestas = 0;
-let partidaAcabada = false;
+//LOGICA DEL JUEGO
+let turno = 1; //A quien le toca tirar, 1(usiario),-1(pc
+let fichas = ["O", "X"]; //Array fichas, cruz va a ser el usuario
+let puestas = 0;//Cuantas fichas hay puestas, cuando haya 9 la partida ha terminado
+let partidaAcabada = false;//Boleano que indica si la partida ha terminado
 let textoVictoria = 
-	document.getElementById("textoVictoria");
+	document.getElementById("textoVictoria");//Mensaje de HTML que indica cuando ganas o pierdes
 let botones = 
 	Array.from(document.getElementsByTagName("button"));
 
 botones.forEach(
 	x => x.addEventListener("click", ponerFicha)
-);
+);//En todos los botones  del tres en raya, se ejecutara la función poner ficha
 
 function ponerFicha(event){
 	
-	let botonPulsado = event.target;
+	let botonPulsado = event.target;//Event es el click
 	if(!partidaAcabada && botonPulsado.innerHTML == ""){
 		botonPulsado.innerHTML = fichas[turno];
 		puestas += 1;
@@ -37,6 +34,7 @@ function ponerFicha(event){
 		if(estadoPartida == 0){
 			cambiarTurno();
 			if(puestas < 9){
+				
 				ia();
 				estadoPartida = estado();
 				puestas += 1;
@@ -130,6 +128,7 @@ function estado(){
 }
 
 function ia(){
+	console.log("hola");
 	function aleatorio(min, max) {
   		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
@@ -140,14 +139,22 @@ function ia(){
 	if(valores[4]==""){
 		pos = 4;
 	}
+
+	
 	else{
+		console.log("hola");
 		let n = aleatorio(0, botones.length-1);
 		while(valores[n]!=""){
 			n = aleatorio(0, botones.length-1); 
 		}
 		pos = n;
+     
+		setTimeout(() => {
+			botones[pos].innerHTML ="O";
+		}, 1000);
+		
 
 	}
-}
+}        
 
 
