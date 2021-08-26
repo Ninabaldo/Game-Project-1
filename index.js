@@ -149,9 +149,9 @@ function ia(){
 		}
 		pos = n;
      
-		setTimeout(() => {
+		
 			botones[pos].innerHTML ="O";
-		}, 1000);
+		
 		
 
 	}
