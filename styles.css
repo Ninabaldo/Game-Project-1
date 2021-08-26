@@ -1,11 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body{
   background-color: rgb(167, 155, 163);
   font-family:-apple-system, "BlinkMacSystemFont", Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', Helvetica Neue, sans-serif;
   color:white;
   margin-top: 20px;
-
+  overflow: hidden;
 }
 
 h1,h2{
@@ -18,28 +23,46 @@ h1{
 
 h2{
   font-size: 1.5em;
-
 }
 
 #tablero{
   margin:auto;
-  
   width: 375px;
   max-width: 100%;
   display:flex;
   flex-wrap: wrap;
-  color:white
-  
-  
+  color:white; 
 }
 
 #tablero>button{
-  width: 125px;
+  border: hidden;
+  width: 115px;
   height: 125px;
   max-width:33.33%;
   font-size: 2em;
   border-radius: 17px;
- 
+  margin: 2px;
+}
+
+button {
+  background: rgba(71, 13, 71, 0.945);
+  color: white;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 3px;
+  padding: 8px 10px;
+  transition-duration: 0.25s;
+}
+
+button:hover {
+  background: rgb(90, 42, 90);
+  cursor: pointer;
+}
+
+#reset{
+  cursor: pointer;
+  color: #005a84;
+  text-decoration: underline;
 }
 
 #textoVictoria{
@@ -48,21 +71,6 @@ h2{
   margin-top : 20px;
   margin-bottom: 40px;
 }
-  
-
-
-
-
-
-
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-
-
 
 .wrapper {
   position:absolute;
@@ -72,13 +80,17 @@ h2{
   width: 550px;
 }
 
-
 .wrapper ul {
   list-style: none;
 }
 
-/* Style the list items inside the UL list, by setting its width, height and line-height 
+.boton-victoria{
+  background-color: #97de97;
+}
+/* 
+  Style the list items inside the UL list, by setting its width, height and line-height 
   and float them to left and set its border and border-radius.
+  Botones
  */
 .wrapper ul li {
   width: 75px;
@@ -103,13 +115,13 @@ to align it properly */
 
 
 /*facebook*/
-.wrapper ul li:hover.linkdin {
+.linkdin:hover {
   border: 5px solid #3b5998;
   box-shadow: 0 0 15px #3b5998;
   transition: all 0.5s ease;
 }
 
-.wrapper ul li:hover .linkdin {
+.wrapper ul li:hover {
   color: #3b5998;
   text-shadow: 0 0 15px #7999dd;
   transition: all 0.5s ease;
@@ -128,33 +140,11 @@ to align it properly */
   transition: all 0.5s ease;
 }
 
-
-
 canvas {
   display: block;
   margin: 0px auto 20px;
   cursor: move;
 }
-
-
-
-button {
-  background: rgb(92, 16, 92);
-  color: white;
-  font-size: 14px;
-  font-family: inherit;
-  border:  1px, white;
-  border-radius: 3px;
-  padding: 8px 10px;
-}
-
-button:hover {
-  background: rgba(255, 255, 255, 0.109);
-  cursor: pointer;
-}
-
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 html, body{
   height: 100%;
