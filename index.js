@@ -1,3 +1,18 @@
+
+//RESET BUTON
+
+//document.querySelector('btn btn-1').addEventListener('click', e => {
+	//this.reset()
+	//console.log("btn btn-1")
+
+//SET TIME OUT
+//let timer= setTimeout(function(){
+	
+//},2000);
+
+
+
+
 let turno = 1;
 let fichas = ["O", "X"];
 let puestas = 0;
@@ -12,6 +27,7 @@ botones.forEach(
 );
 
 function ponerFicha(event){
+	
 	let botonPulsado = event.target;
 	if(!partidaAcabada && botonPulsado.innerHTML == ""){
 		botonPulsado.innerHTML = fichas[turno];
@@ -41,6 +57,7 @@ function ponerFicha(event){
 }
 
 function cambiarTurno(){
+	
 	if(turno==1){
 		turno = 0;
         
@@ -129,12 +146,8 @@ function ia(){
 			n = aleatorio(0, botones.length-1); 
 		}
 		pos = n;
+
 	}
-     
-	botones[pos].innerHTML = "O";
-	return pos;
 }
-
-
 
 

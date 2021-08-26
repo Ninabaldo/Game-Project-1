@@ -1,262 +1,262 @@
 
 
 body{
-    background-color: rgb(195, 151, 181);
-    font-family:-apple-system, "BlinkMacSystemFont", Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', Helvetica Neue, sans-serif;
-    color:white;
-    margin-top: 20px;
+  background-color: rgb(195, 151, 181);
+  font-family:-apple-system, "BlinkMacSystemFont", Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', Helvetica Neue, sans-serif;
+  color:white;
+  margin-top: 20px;
 
 }
 
 h1,h2{
-    text-align: center;
+  text-align: center;
 }
 
 h1{
-    font-size: 4em;
+  font-size: 4em;
 }
 
 h2{
-    font-size: 1.5em;
+  font-size: 1.5em;
 
 }
 
 #tablero{
-    margin:auto;
-    
-    width: 375px;
-    max-width: 100%;
-    display:flex;
-    flex-wrap: wrap;
-    color:white
-    
-    
+  margin:auto;
+  
+  width: 375px;
+  max-width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  color:white
+  
+  
 }
 
 #tablero>button{
-    width: 125px;
-    height: 125px;
-    max-width:33.33%;
-    font-size: 2em;
-    border-radius: 17px;
-   
+  width: 125px;
+  height: 125px;
+  max-width:33.33%;
+  font-size: 2em;
+  border-radius: 17px;
+ 
 }
 
 #textoVictoria{
-    visibility: hidden;
-    color: rgb(155, 19, 125);
-    margin-top : 20px;
-    margin-bottom: 40px;
+  visibility: hidden;
+  color: rgb(155, 19, 125);
+  margin-top : 20px;
+  margin-bottom: 40px;
 }
-    
-
-
   
- 
+
 
 
 
- * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    background: #9c949c;
-    background-repeat: no-repeat;
-  }
-  
-  
-  .wrapper {
-    position:absolute;
-    top: 80%;
-    left: 90%;
-    transform: translate(-50%, -50%);
-    width: 550px;
-  }
-  
-  
-  .wrapper ul {
-    list-style: none;
-  }
-  
-  /* Style the list items inside the UL list, by setting its width, height and line-height 
-    and float them to left and set its border and border-radius.
-   */
-  .wrapper ul li {
-    width: 75px;
-    height: 75px;
-    line-height: 75px;
-    margin: 0 5px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 50%;
-    border: 3px solid #ffffff;
-    float: left;
-    transition: all 0.5s ease;
-  }
-  
-  /* Style the icons by setting its color and margin-top value to 20px 
-  to align it properly */
-  .wrapper ul li .fa {
-    color: #ffffff;
-    margin-top: 20px;
-    transition: all 0.5s ease;
-  }
-  
-  
-  /*facebook*/
-  .wrapper ul li:hover.linkdin {
-    border: 5px solid #3b5998;
-    box-shadow: 0 0 15px #3b5998;
-    transition: all 0.5s ease;
-  }
-  
-  .wrapper ul li:hover .linkdin {
-    color: #3b5998;
-    text-shadow: 0 0 15px #7999dd;
-    transition: all 0.5s ease;
-  }
-  
-  /*github*/
-  .wrapper ul li:hover.github {
-    border: 5px solid #050505;
-    box-shadow: 0 0 15px #080808;
-    transition: all 0.5s ease;
-  }
-  
-  .wrapper ul li:hover .github {
-    color: #050505;
-    text-shadow: 0 0 15px #020202;
-    transition: all 0.5s ease;
-  }
-  
 
-  
-  canvas {
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #9c949c;
+  background-repeat: no-repeat;
+}
+
+
+.wrapper {
+  position:absolute;
+  top: 80%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+}
+
+
+.wrapper ul {
+  list-style: none;
+}
+
+/* Style the list items inside the UL list, by setting its width, height and line-height 
+  and float them to left and set its border and border-radius.
+ */
+.wrapper ul li {
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  margin: 0 5px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  float: left;
+  transition: all 0.5s ease;
+}
+
+/* Style the icons by setting its color and margin-top value to 20px 
+to align it properly */
+.wrapper ul li .fa {
+  color: #ffffff;
+  margin-top: 20px;
+  transition: all 0.5s ease;
+}
+
+
+/*facebook*/
+.wrapper ul li:hover.linkdin {
+  border: 5px solid #3b5998;
+  box-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .linkdin {
+  color: #3b5998;
+  text-shadow: 0 0 15px #7999dd;
+  transition: all 0.5s ease;
+}
+
+/*github*/
+.wrapper ul li:hover.github {
+  border: 5px solid #050505;
+  box-shadow: 0 0 15px #080808;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .github {
+  color: #050505;
+  text-shadow: 0 0 15px #020202;
+  transition: all 0.5s ease;
+}
+
+
+
+canvas {
+  display: block;
+  margin: 0px auto 20px;
+  cursor: move;
+}
+
+
+
+button {
+  background: rgb(92, 16, 92);
+  color: white;
+  font-size: 14px;
+  font-family: inherit;
+  border:  1px, white;
+  border-radius: 3px;
+  padding: 8px 10px;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.109);
+  cursor: pointer;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body{
+  height: 100%;
+  font-weight: 600;
+}
+
+
+
+svg {
     display: block;
-    margin: 0px auto 20px;
-    cursor: move;
-  }
-  
- 
-  
-  button {
-    background: rgb(92, 16, 92);
-    color: white;
-    font-size: 14px;
-    font-family: inherit;
-    border:  1px, white;
-    border-radius: 3px;
-    padding: 8px 10px;
-  }
-  
-  button:hover {
-    background: rgba(255, 255, 255, 0.109);
-    cursor: pointer;
-  }
+    font: 10.5em 'Montserrat';
+    width: 860px;
+    height: 300px;
+    margin: 0 auto;
+}
 
-  
-  @import url(https://fonts.googleapis.com/css?family=Montserrat);
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
 
-  html, body{
-    height: 100%;
-    font-weight: 600;
-  }
-  
- 
-  
-  svg {
-      display: block;
-      font: 10.5em 'Montserrat';
-      width: 860px;
-      height: 300px;
-      margin: 0 auto;
-  }
-  
-  .text-copy {
-      fill: none;
-      stroke: white;
-      stroke-dasharray: 6% 29%;
-      stroke-width: 5px;
-      stroke-dashoffset: 0%;
-      animation: stroke-offset 5.5s infinite linear;
-  }
-  
-  .text-copy:nth-child(1){
-      stroke: #e7da2a;
-      animation-delay: -1;
-  }
-  
-  .text-copy:nth-child(2){
-      stroke: #005a84;
-      animation-delay: -2s;
-  }
-  
-  .text-copy:nth-child(3){
-      stroke: #c417c4;
-      animation-delay: -3s;
-  }
-  
-  .text-copy:nth-child(4){
-      stroke: #ffffff;
-      animation-delay: -4s;
-  }
-  
-  .text-copy:nth-child(5){
-      stroke: #fd31fd;
-      animation-delay: -5s;
-  }
-  
-  @keyframes stroke-offset{
-      100% {stroke-dashoffset: -35%;}
-  }
-  
+.text-copy:nth-child(1){
+    stroke: #e7da2a;
+    animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+    stroke: #005a84;
+    animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+    stroke: #c417c4;
+    animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+    stroke: #ffffff;
+    animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+    stroke: #fd31fd;
+    animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+    100% {stroke-dashoffset: -35%;}
+}
+
 .pulse:hover, 
 .pulse:focus {
-  animation: pulse 1s;
-  box-shadow: 0 0 0 2em rgba(#fff,0);
+animation: pulse 1s;
+box-shadow: 0 0 0 2em rgba(#fff,0);
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 var(--hover); }
+0% { box-shadow: 0 0 0 0 var(--hover); }
 }
 
-/*BUTTON RESET*/
+/*BUTTON RESET
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-  width: 10vw;
-  min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+align-content: center;
+flex-wrap: wrap;
+width: 10vw;
+min-height: 100vh;
 }
 .btn {
-  flex: 1 1 auto;
-  margin: 10px;
-  padding: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  cursor:pointer;
-  position: absolute;
-  left:16%;
-  top:630px;
-  
+flex: 1 1 auto;
+margin: 10px;
+padding: 20px;
+text-align: center;
+text-transform: uppercase;
+transition: 0.5s;
+background-size: 200% auto;
+color: white;
+cursor:pointer;
+position: absolute;
+left:16%;
+top:630px;
 
-  
 
-  box-shadow: 0 0 20px #eee;
-  border-radius: 15px;
- }
+
+
+box-shadow: 0 0 20px #eee;
+border-radius: 15px;
+}
 
 .btn:hover {
-  background-position: right center; /* change the direction of the change here */
-}
+background-position: right center; /* change the direction of the change here 
+}*/
 
-.btn-1 {
-  background-image: linear-gradient(to right, #f665f6 0%, #8a8584 51%, #f5ee8c 100%);
-}
+/*.btn-1 {
+/*background-image: linear-gradient(to right, #f665f6 0%, #8a8584 51%, #f5ee8c 100%);
+} */
