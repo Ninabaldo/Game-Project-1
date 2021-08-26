@@ -1,23 +1,20 @@
 
 //RESET BUTON
 
-//document.querySelector('btn btn-1').addEventListener('click', e => {
-	//this.reset()
-	//console.log("btn btn-1")
 
 //SET TIME OUT
 //let timer= setTimeout(function(){
 	
 //},2000);
+
+
 //LOGICA DEL JUEGO
 let turno = 1; //A quien le toca tirar, 1(usiario),-1(pc
 let fichas = ["O", "X"]; //Array fichas, cruz va a ser el usuario
 let puestas = 0;//Cuantas fichas hay puestas, cuando haya 9 la partida ha terminado
 let partidaAcabada = false;//Boleano que indica si la partida ha terminado
-let textoVictoria = 
-	document.getElementById("textoVictoria");//Mensaje de HTML que indica cuando ganas o pierdes
-let botones = 
-	Array.from(document.getElementsByTagName("button"));
+let textoVictoria = document.getElementById("textoVictoria");//Mensaje de HTML que indica cuando ganas o pierdes
+let botones = Array.from(document.getElementsByTagName("button"));
 
 botones.forEach(
 	x => x.addEventListener("click", ponerFicha)
@@ -40,22 +37,31 @@ function ponerFicha(event){
 				puestas += 1;
 				cambiarTurno();	
 			}	
+			else if(puestas==9){
+			textoVictoria.innerHTML = "TIE... try it again "
+			partidaAcabada = true;
+			textoVictoria.style.visibility = "visible";
+			}
 		}
+		   
+
+		   
 		
 		if(estadoPartida == 1){
 			textoVictoria.style.visibility = "visible";
 			partidaAcabada = true;
 		}
 		else if(estadoPartida == -1){
-			textoVictoria.innerHTML = "Oh no,you lost ;( Try again!"
+			textoVictoria.innerHTML = "Oh no, you lost ;( Try again!"
 			partidaAcabada = true;
 			textoVictoria.style.visibility = "visible";
 		}
+		
 	}	
 }
 
 function cambiarTurno(){
-	
+
 	if(turno==1){
 		turno = 0;
         
@@ -73,13 +79,14 @@ function estado(){
 	function sonIguales(...args){
 		valores = args.map(x=>x.innerHTML);
 		if(valores[0] != "" && valores.every((x, i, arr) => x===arr[0])){
-			args.forEach(x => x.style.backgroundColor = "pink")
+			args.forEach(x => x.style.backgroundColor = "#EB5FF9")
 			return true;
 		}
 		else{
 			return false;
 		}
 	}
+	
 
 	//Comprobamos si hay alguna linea
 	if(sonIguales(botones[0], botones[1], botones[2])){
@@ -128,21 +135,22 @@ function estado(){
 }
 
 function ia(){
-	console.log("hola");
+	
 	function aleatorio(min, max) {
   		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 
 	let valores = botones.map(x=>x.innerHTML);
 	let pos = -1;
-
+    
 	if(valores[4]==""){
+
 		pos = 4;
 	}
 
 	
 	else{
-		console.log("hola");
+		
 		let n = aleatorio(0, botones.length-1);
 		while(valores[n]!=""){
 			n = aleatorio(0, botones.length-1); 
