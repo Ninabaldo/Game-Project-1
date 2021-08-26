@@ -150,11 +150,13 @@ function ia(){
 		pos = n;
      
 		
-			botones[pos].innerHTML ="O";
+			
 		
 		
 
 	}
+	botones[pos].innerHTML ="O";
+	return pos;
 }        
 
 
