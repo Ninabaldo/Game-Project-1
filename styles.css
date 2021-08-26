@@ -52,7 +52,7 @@ h2{
 
 
   
- }
+ 
 
 
 
@@ -63,6 +63,7 @@ h2{
   
   body {
     background: #9c949c;
+    background-repeat: no-repeat;
   }
   
   
@@ -241,8 +242,9 @@ h2{
   background-size: 200% auto;
   color: white;
   cursor:pointer;
-  position:relative;
-  left:100%;
+  position: absolute;
+  left:16%;
+  top:630px;
   
 
   
