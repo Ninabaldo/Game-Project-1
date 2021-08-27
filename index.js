@@ -14,16 +14,14 @@ let botones = Array.from(document.getElementsByTagName("button"));
 
 
 const reset = () => {
-	 //turno = 1; //A quien le toca tirar, 1(usiario),-1(pc
-	 //puestas = 0;//Cuantas fichas hay puestas, cuando haya 9 la partida ha terminado o cuando alguien gana
-	 //partidaAcabada = false;//Boleano que indica si la partida ha terminado
-     //textoVictoria.innerHTML = null;
-	 //botones.forEach(ele => ele.innerHTML = "");
-     //args.forEach(x => x.classList.remove('boton-victoria'));
-     window.location.reload();
-
-     
-
+     turno = 1; //A quien le toca tirar, 1(usiario),-1(pc
+     puestas = 0;//Cuantas fichas hay puestas, cuando haya 9 la partida ha terminado o cuando alguien gana
+     partidaAcabada = false;//Boleano que indica si la partida ha terminado
+     botones.forEach(ele => ele.innerHTML = "");
+      
+  
+     //window.location.reload();
+     //Aqui en vez de hacer un reload, oculta el mensaje de victoria y ya está.
 }
 
 document.querySelector('#reset').addEventListener('click',reset);
@@ -54,7 +52,6 @@ const ponerFicha = event => {
 				textoVictoria.innerHTML = "TIE... try it again "
 				partidaAcabada = true;
 				textoVictoria.style.visibility = "visible";
-
 			}
 		}
 
@@ -71,7 +68,6 @@ const ponerFicha = event => {
 
 	}
 };
-
 //En todos los botones  del tres en raya, se ejecutara la función poner ficha
 botones.forEach(x => x.addEventListener("click", ponerFicha));
 

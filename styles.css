@@ -42,6 +42,28 @@ h2{
   font-size: 2em;
   border-radius: 17px;
   margin: 2px;
+
+}
+
+button {
+  background: rgba(71, 13, 71, 0.945);
+  color: white;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 3px;
+  padding: 8px 10px;
+  transition-duration: 0.25s;
+}
+
+button:hover {
+  background: rgb(90, 42, 90);
+  cursor: pointer;
+}
+
+#reset{
+  cursor: pointer;
+  color: #005a84;
+  text-decoration: underline;
 }
 
 button {
@@ -53,6 +75,7 @@ button {
   padding: 8px 10px;
   transition-duration: 0.25s;
 }
+
 
 button:hover {
   background: rgb(228, 231, 200);
@@ -73,6 +96,7 @@ button:hover {
   font-size: 34px;
 }
 
+
 .wrapper {
   position:absolute;
   top: 80%;
@@ -86,8 +110,8 @@ button:hover {
 }
 
 .boton-victoria{
+
   background-color: #8dfb8d;
-  
 
 }
 /* 
